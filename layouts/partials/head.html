@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    
+    {{ $mainStyle := resources.Get "css/main.css" | minify }}
+    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}">
+    
+    {{ $toggleStyle := resources.Get "css/toggle.css" | minify }}
+    <link rel="stylesheet" href="{{ $toggleStyle.RelPermalink }}">
+
+    {{ $articleStyle := resources.Get "css/article.css" | minify }}
+    <link rel="stylesheet" href="{{ $articleStyle.RelPermalink }}">
+    
+    {{ $singleStyle := resources.Get "css/single.css" | minify }}
+    <link rel="stylesheet" href="{{ $singleStyle.RelPermalink }}">
+    
+    {{ $js := resources.Get "js/main.js" | minify }}
+    <script src="{{ $js.RelPermalink }}"></script>
+</head>

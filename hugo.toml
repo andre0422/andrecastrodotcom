@@ -1,0 +1,27 @@
+baseURL = 'https://andre0422.github.io/andrecastrodotcom/'
+languageCode = 'en-us'
+title = 'andrecastro'
+
+[params]
+  name = "Andre Castro."
+  tagline = "I'm interested in building great products."
+  bio = """In the past, I have enjoyed working on neurophysiology research, 
+          frontend development, data-driven insurance operations optimization,
+          and most recently, a digital platform for virtual dementia care. 
+          I studied Health Sciences at Ontario Tech."""
+  linkedin = "https://www.linkedin.com/in/andrecastro99/"
+  email = "andrejoshcastro at outlook dot com"
+  baycrest = "https://www.baycrest.org/Baycrest/Healthcare-Programs-Services/Clinical-Services/The-Virtual-Behavioural-Medicine-(VBM)-Program"
+  ontarioTech = "https://ontariotechu.ca/"
+  Trident = "https://www.tridentassistance.ca/"
+  msh = "https://www.msh-intl.com/en/"
+  cureusPublication = "https://www.cureus.com/posters/1746-examining-changes-in-neural-activity-and-performance-in-response-to-learning-a-novel-force-matching-task-a-pilot-study"
+
+
+
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2

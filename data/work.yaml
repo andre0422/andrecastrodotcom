@@ -1,0 +1,24 @@
+articles:
+  - title: "The VBM Program - A Virtual Hospital"
+    subtitle: "UI/UX research, Product Management"
+    image: "vbm_img_small.jpg"
+    alt: "VBM Program Image"
+    url: "/work/vbm-program"
+    
+  - title: "Predicting the storm during the calm - The University Health Network partient volume conundrum"
+    subtitle: "Business analysis, Product Management"
+    image: "uhn_img_small.jpg"
+    alt: "UHN Project Image"
+    url: "/work/uhn-patient-volume"
+    
+  - title: "Trinity - A free OCR solution"
+    subtitle: "Software Engineering"
+    image: "trinity_coming_soon.jpg"
+    alt: "Trinity Project Image"
+    url: "/work/trinity"
+
+  - title: "Music and Mental Health - What does your music taste say about your mental health?"
+    subtitle: "Data analysis"
+    image: "music_img_small.jpg"
+    alt: "Music Analysis Image" 
+    url: "/work/music-and-mental-health"
