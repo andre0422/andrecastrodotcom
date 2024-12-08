@@ -1,0 +1,184 @@
+.single-article .title-wrapper .toggle-container {
+    display: none;
+}
+
+.hamburger-checkbox {
+    display: none;
+}
+
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 28px;
+    left: 20px;
+    z-index: 1000;
+    border: 1px solid var(--text-color);
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+/* Modified to be hidden by default on all screen sizes */
+.side-nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: var(--bg-color);
+    border-right: 1px solid var(--text-color);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Hidden by default */
+}
+
+.side-nav-wrapper {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-toggle {
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+/* Show sidebar when checkbox is checked (for all screen sizes) */
+.hamburger-checkbox:checked ~ .side-nav-container {
+    transform: translateX(0);
+}
+
+/* Hamburger animation when checked (for all screen sizes) */
+.hamburger-checkbox:checked ~ .hamburger-menu span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-checkbox:checked ~ .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-checkbox:checked ~ .hamburger-menu span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#TableOfContents {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#TableOfContents nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#TableOfContents ul {
+    list-style: none;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#TableOfContents ul li {
+    margin: 0.5rem 0;
+}
+
+#TableOfContents a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#TableOfContents a:hover {
+    color: var(--accent-color);
+}
+
+#text-section {
+    width: 45%;
+    max-width: 1200px;
+    padding: 30px 10px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+
+
+.text-subtitle {
+    font-style: italic;
+    color: #333;
+}
+.text-date {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 50px; 
+}
+
+.text {
+    padding-top: 40px;
+}
+
+#text-title {
+    font-size: 1.1em;
+    line-height: 2;
+    margin-bottom: 0px;
+}
+
+.text-content p {
+    margin-top: 20px;
+}
+
+.text-content ol {
+    margin-top: 20px;
+}
+
+.text-content h2 {
+    margin-top: 60px;
+}
+
+  @media (max-width: 950px) {
+    #text-section {
+        width: 85%;
+        padding-top: 30px;
+    }
+  }
+
+/* Hide sidebar by default on mobile */
+@media (max-width: 768px) {
+    .side-nav-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    .side-nav-title {
+        font-size: 1.5em;
+    }
+}
+
+  @media (max-width: 600px) {
+    #text-section {
+        width: 90%;
+        padding-top: 60px;
+    }
+    #TableOfContents ul li {
+        font-size: 0.8em;
+    }
+  }

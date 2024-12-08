@@ -1,0 +1,10 @@
+<section id="about">
+    {{ partial "title.html" (dict "title" .title) }}
+    <p id="about-text-1">{{ .description_1 }}</p>
+    <p id="about-text-2">
+        {{ .description_2 | safeHTML }}
+    </p>
+    <p id="about-text-3">
+        {{ .description_3 | safeHTML }}
+    </p>
+</section>

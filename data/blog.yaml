@@ -1,0 +1,20 @@
+articles:
+  - title: "Sundried-Tomato Pesto - The Four Ingredient Pasta Sauce"
+    subtitle: "Recipe"
+    image: "tomato_img_small.jpg"
+    alt: "Sundried Tomato Image"
+    
+  - title: "The Land of the Rising Sun - 10 Days in Japan"
+    subtitle: "Travel"
+    image: "jpn_img_small.jpg"
+    alt: "Japan Image"
+    
+  - title: "Veal Parm - An Italian Staple"
+    subtitle: "Recipe"
+    image: "veal_img_small.jpg"
+    alt: "Veal Image"
+    
+  - title: "The Land of the Ice and Fire - 10 Days in Iceland"
+    subtitle: "Travel"
+    image: "iceland_img_small.jpg"
+    alt: "Music Analysis Image" 
