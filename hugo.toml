@@ -17,9 +17,6 @@ title = 'andrecastro'
   msh = "https://www.msh-intl.com/en/"
   cureusPublication = "https://www.cureus.com/posters/1746-examining-changes-in-neural-activity-and-performance-in-response-to-learning-a-novel-force-matching-task-a-pilot-study"
 
-
-
-
 [markup]
   [markup.tableOfContents]
     endLevel = 3
