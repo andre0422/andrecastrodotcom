@@ -53,9 +53,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// function updateActiveNavItem() {
+//     const navItems = document.querySelectorAll('nav a');
+//     const currentPath = window.location.pathname;
+
+//     // Remove active class from all items
+//     navItems.forEach(item => {
+//         item.classList.remove('active');
+//     });
+
+//     // Add active class to matching item
+//     navItems.forEach(item => {
+//         const href = item.getAttribute('href');
+        
+//         // Handle root path
+//         if (currentPath === '/' && href === '/') {
+//             item.classList.add('active');
+//             console.log("root path active");
+//             return;
+//         }
+        
+//         // Handle other paths - exact match or direct child
+//         if (href !== '/') {
+//             const hrefPattern = new RegExp(`^${href}/?$|^${href}/[^/]+$`);
+//             if (hrefPattern.test(currentPath)) {
+//                 item.classList.add('active');
+//                 console.log("other path active");
+//             }
+//         }
+//     });
+// }
+
 function updateActiveNavItem() {
     const navItems = document.querySelectorAll('nav a');
-    const currentPath = window.location.pathname;
+    const basePath = window.location.pathname.split('/').slice(0, 2).join('/') + '/';
+    let currentPath = window.location.pathname.replace(basePath, '/');
+
+    // Ensure currentPath starts with '/'
+    if (!currentPath.startsWith('/')) {
+        currentPath = '/' + currentPath;
+    }
 
     // Remove active class from all items
     navItems.forEach(item => {
@@ -64,8 +101,16 @@ function updateActiveNavItem() {
 
     // Add active class to matching item
     navItems.forEach(item => {
-        const href = item.getAttribute('href');
-        
+        let href = item.getAttribute('href');
+
+        // Normalize href
+        if (!href.startsWith('/')) {
+            href = '/' + href;
+        }
+        if (!href.endsWith('/')) {
+            href += '/';
+        }
+
         // Handle root path
         if (currentPath === '/' && href === '/') {
             item.classList.add('active');
@@ -75,7 +120,7 @@ function updateActiveNavItem() {
         
         // Handle other paths - exact match or direct child
         if (href !== '/') {
-            const hrefPattern = new RegExp(`^${href}/?$|^${href}/[^/]+$`);
+            const hrefPattern = new RegExp(`^${href}$|^${href}[^/]+`);
             if (hrefPattern.test(currentPath)) {
                 item.classList.add('active');
                 console.log("other path active");
@@ -83,6 +128,7 @@ function updateActiveNavItem() {
         }
     });
 }
+
 
 // Initialize
 window.addEventListener('load', updateActiveNavItem);
