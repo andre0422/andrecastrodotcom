@@ -53,8 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-
 function updateActiveNavItem() {
     const navItems = document.querySelectorAll('nav a');
     const currentPath = window.location.pathname;
@@ -71,12 +69,17 @@ function updateActiveNavItem() {
         // Handle root path
         if (currentPath === '/' && href === '/') {
             item.classList.add('active');
-            return; // stop checks for index
+            console.log("root path active");
+            return;
         }
         
-        // Handle other paths
-        if (currentPath.includes(href) && href !== '/') {
-            item.classList.add('active');
+        // Handle other paths - exact match or direct child
+        if (href !== '/') {
+            const hrefPattern = new RegExp(`^${href}/?$|^${href}/[^/]+$`);
+            if (hrefPattern.test(currentPath)) {
+                item.classList.add('active');
+                console.log("other path active");
+            }
         }
     });
 }
