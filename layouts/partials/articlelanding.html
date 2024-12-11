@@ -5,9 +5,10 @@
             <div class="article">
                 <div class="article-image">
                     <a href="{{ .RelPermalink }}">
-                        <h2 class="article-title">{{ .Title }}</h2>
-                        <p class="article-subtitle">{{ .Params.subtitle }}</p>
+                        <img src="/images/{{ .Params.image }}" alt="{{ .Title }}">
                     </a>
+                    <h2 class="article-title">{{ .Title }}</h2>
+                    <p class="article-subtitle">{{ .Params.subtitle }}</p>
                 </div>
             </div>
         {{ end }}
