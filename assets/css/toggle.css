@@ -18,7 +18,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #000;
+    background-color: var(--text-color);
     border-radius: 34px;
   }
 
@@ -33,20 +33,15 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     transition: transform 0.6s;
     border-radius: 50%;
-    border: 1px solid #fff;
   }
 
   input:checked + .slider {
-    background-color: #000;
-  }
-
-  input:focus + .slider {
-    box-shadow: 0 0 1px #fff;
+    background-color: var(--text-color);
   }
 
   input:checked + .slider:before {
-    transform: translateX(24px);
+    transform: translateX(25px);
   }
