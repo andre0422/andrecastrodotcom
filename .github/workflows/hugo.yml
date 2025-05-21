@@ -30,10 +30,13 @@ jobs:
           extended: true
       - name: Build with Hugo
         run: hugo --minify
+      - name: List public directory
+        run: ls -la ./public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+          retention-days: 1
 
   deploy:
     environment:
@@ -45,3 +48,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
