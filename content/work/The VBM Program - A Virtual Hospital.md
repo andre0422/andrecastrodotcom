@@ -1,5 +1,5 @@
 ---
-title: "Test VBM" 
+title: "The VBM Program - A Virtual Hospital" 
 subtitle: "UI/UX Research, Product Management"
 image: "vbm_img_small.jpg" 
 alt: "VBM test" 
