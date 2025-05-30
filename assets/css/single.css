@@ -119,8 +119,6 @@
     margin-top: 60px;
 }
 
-
-
 .text-subtitle {
     font-style: italic;
     color: #333;
@@ -141,17 +139,75 @@
     margin-bottom: 0px;
 }
 
+.text-content {
+    margin: 2em 0;
+}
+
 .text-content p {
     margin-top: 20px;
+    text-align: left;
 }
 
 .text-content ol {
     margin-top: 20px;
+    text-align: left;
 }
 
 .text-content h2 {
     margin-top: 60px;
+    text-align: left;
 }
+
+.text-content figure {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.text-content figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-content figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.text-content {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-content {
+    margin-top: 0.5em;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
 
   @media (max-width: 950px) {
     #text-section {
