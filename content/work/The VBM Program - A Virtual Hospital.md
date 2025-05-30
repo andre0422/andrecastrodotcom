@@ -65,7 +65,7 @@ By meeting these objectives, the VBM program can:
 - Contribute to the organization's machine learning and AI strategy that may lead to breakthroughs in dementia care
 
 
-# Brainstorming the Solution (Product Discover)
+# Brainstorming the Solution (Product Discovery)
 
 *That Damn Intake Form*
 
@@ -73,7 +73,7 @@ The key stakeholders set a hard requirement for 'digitizing the original intake 
 
 *Automating Consultation Letter Dictations*
 
-This was one of the big asks for this product -- the automation of consult letter dictation. During my initial observation, this was clearly one of the largest time sinks in the entire workflow. To remove this task altogether was a game changer for clinicians. I might post an article in the near future going over the case study/process for how we tackled this problem in depth (AI-Free).
+This was one of the big asks for this product -- the automation of consult letter dictation. During my initial observation, this was clearly one of the largest time sinks in the entire workflow. To remove this task altogether was a game changer for clinicians. I might post an article in the near future going over the case study/process for how we tackled this problem in-depth (AI-Free).
 
 *Auto-filling Patient Information from Baycrest's EHR System*
 
@@ -99,20 +99,20 @@ Here is what our study design looked like:
 We used the information obtained from the observational studies to serve as a foundation for design sprints. Google has a great design sprint methodology that we used to iterate very quickly. Here is breakdown of the framework we used to guide feature ideation and development:
 
 1. Understand
-	1. 'How might we' prompting
-	2. Experience mapping
-	3. User interviews
+	- 'How might we' prompting
+	-  Experience mapping
+	-  User interviews
 2. Define
-	1. Success metrics
-	2. Signals
+	- Success metrics
+	- Signals
 3. Decide
-	1. Low-fidelity protoyping
+	- Low-fidelity protoyping
 4. Prototyping
-	1. High-fidelity prototyping
+	- High-fidelity prototyping
 5. Validate
-	1. Stakeholder review
-	2. Technical review
-	3. Cognitive walkthroughs
+	- Stakeholder review
+	- Technical review
+	- Cognitive walkthroughs
 
 # Final Remarks
 

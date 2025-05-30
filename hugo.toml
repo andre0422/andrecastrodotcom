@@ -21,4 +21,7 @@ title = 'andrecastro'
   [markup.tableOfContents]
     endLevel = 3
     ordered = false
-    startLevel = 1 
+    startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true 
