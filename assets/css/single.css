@@ -223,10 +223,6 @@ h1 {
   }
 
 /* Image Grid Layout */
-figure {
-    flex-grow: 1;
-    margin-bottom: 0.5em;
-}
 
 .image-grid-container {
     display: grid;
@@ -237,6 +233,7 @@ figure {
 
 .gallery-item {
     margin: 0;
+    padding-bottom: 0.5em;
     cursor: pointer;
     break-inside: avoid;
     transition: transform 0.2s ease-in-out;
