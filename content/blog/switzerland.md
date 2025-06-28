@@ -42,7 +42,7 @@ I had the opportunity to explore Switzerland with 3 friends and my brother for 8
         {{<figure src="/images/oeschinensee_swiss/img_6700.png" alt="Oeschinensee 6">}}
         {{<figure src="/images/iseltwald_swiss/img_6717.png" alt="Iseltwald 1">}}
         {{<figure src="/images/iseltwald_swiss/img_6724.png" alt="Iseltwald 2">}}
-        {{<figure src="/images/iseltwald_swiss/img_6719.png" alt="Iseltwalk 3">}}
+        {{<figure src="/images/iseltwald_swiss/img_6719.png" alt="Iseltwald 3">}}
     </div>
 </div>
 
