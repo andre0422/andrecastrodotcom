@@ -2,7 +2,7 @@
 {{ $alt := .Get "alt" }}
 {{ $caption := .Get "caption" }}
 
-<figure>
-    <img src="{{ $src }}" alt="{{ $alt }}">
+<figure class="gallery-item" onclick="openModal('{{ $src }}', '{{ $alt }}')">
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
     {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
 </figure> 
