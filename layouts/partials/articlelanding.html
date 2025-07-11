@@ -1,14 +1,13 @@
 <section id="article-section">
     {{ partial "title.html" (dict "title" .title) }}
     <div class="article-container">
-        {{ range .pages}}
+        {{ range .pages }}
             <div class="article">
                 <div class="article-image">
                     <a href="{{ .RelPermalink }}">
-                        <img src="/images/{{ .Params.image }}" alt="{{ .Title }}">
+                        <h2 class="article-title">{{ .Title }}</h2>
+                        <p class="article-subtitle">{{ .Params.subtitle }}</p>
                     </a>
-                    <h2 class="article-title">{{ .Title }}</h2>
-                    <p class="article-subtitle">{{ .Params.subtitle }}</p>
                 </div>
             </div>
         {{ end }}

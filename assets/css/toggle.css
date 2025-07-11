@@ -3,6 +3,8 @@
     display: inline-block;
     width: 60px;
     height: 34px;
+    /* Ensure the toggle itself is properly aligned */
+    vertical-align: middle;
   }
 
   .toggle input {
@@ -20,6 +22,7 @@
     bottom: 0;
     background-color: var(--text-color);
     border-radius: 34px;
+    box-sizing: border-box;
   }
 
   .slider.with-transition {
@@ -44,4 +47,15 @@
 
   input:checked + .slider:before {
     transform: translateX(25px);
+  }
+
+  /* Container for better alignment with the title */
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    /* Match the h1 line-height exactly for perfect alignment */
+    line-height: 1.2;
+    /* Ensure the container doesn't add extra space */
+    margin: 0;
+    padding: 0;
   }
