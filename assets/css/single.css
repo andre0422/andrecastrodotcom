@@ -137,7 +137,7 @@
     margin: 0 auto 30px;
 }
 
-.article-title {
+.article-header .article-title {
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 20px;
@@ -145,7 +145,7 @@
     font-family: 'Garamond', serif; /* Ensure title also uses serif */
 }
 
-.article-subtitle {
+.article-header .article-subtitle {
     font-size: 1.6rem;
     font-style: italic;
     color: var(--text-color);
@@ -273,7 +273,7 @@
     #article-page {
         width: 85%;
     }
-    .article-title {
+    .article-header .article-title {
         font-size: 2.8rem;
     }
 }
@@ -299,10 +299,10 @@
         width: 90%;
         margin-top: 80px;
     }
-    .article-title {
+    .article-header .article-title {
         font-size: 2.2rem;
     }
-    .article-subtitle {
+    .article-header .article-subtitle {
         font-size: 1.2rem;
     }
     #TableOfContents ul li {
