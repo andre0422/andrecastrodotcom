@@ -16,14 +16,19 @@
     </div>
 </div>
 
-<section id="text-section">
-    <h1 id="text-title">{{ partial "title.html" (dict "title" .Title) }}</h1>
-    <div class="text-container">
-        <div class="text">
-            <h2 class="text-subtitle">{{ .Params.subtitle }}</h2>
-            <h2 class="text-date">{{ .Date.Format "January 2, 2006" }}</h2>
-            <div class="text-content">{{ .Content }}</div>
+<article id="article-page">
+    <header class="article-header">
+        <h1 class="article-title">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+        <p class="article-subtitle">{{ .Params.subtitle }}</p>
+        {{ end }}
+        <div class="article-meta">
+            <span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>
         </div>
+    </header>
+
+    <div class="article-content">
+        {{ .Content }}
     </div>
-</section>
+</article>
 
