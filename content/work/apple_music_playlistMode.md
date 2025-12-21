@@ -1,5 +1,5 @@
 ---
-title: "Apple Music - Playlist Mode Feature" 
+title: "Apple Music - Playlist Mode" 
 subtitle: "UI/UX Research, Product Management"
 image: "n/a" 
 alt: "AM - Playlist Mode Img" 
@@ -13,15 +13,13 @@ draft: false
 
 **Objective:** To enable "Passive Curation" by leveraging implicit user signals (play-through vs. skip) to automatically build personalized playlists, specifically for deep-work or exploration sessions.
 
----
-
 ## 2. User Stories
 
 - **As a focused worker,** I want my music player to remember the songs I liked without me having to switch apps, so I can stay productive.
     
 - **As a traveler,** I want to create a "soundtrack" of my trip based on what I actually listened to, so I can reminisce later with zero manual effort.
 
----
+
 
 ## 3. Technical Requirements & Considerations
 
@@ -51,7 +49,7 @@ This feature should not just be a siloed list; it should act as a high-intent tr
     
 - **UI/UX Interaction:** The "Playlist Mode" toggle should reside in the "Now Playing" ellipsis menu and the Control Center for rapid access.
 
----
+
 
 ## 4. Success Metrics (KPIs)
 

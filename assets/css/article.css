@@ -1,8 +1,26 @@
+.article-container {
+  width: 100%;
+}
+
 .article {
   padding-top: 40px;
 }
 
+.article-image a {
+  display: block;
+}
+
+.article-title {
+  margin-bottom: 5px;
+  font-size: 1.8em;
+  line-height: 1.2;
+}
+
 .article-subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  line-height: 1.2;
   color: #333;
 }
 
@@ -21,12 +39,9 @@
 }
 
 .article-image:hover {
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 
-.article-image img:hover {
-  transform: scale(1.06);
-}
 
 #article-section {
   width: 45%;
