@@ -121,11 +121,11 @@
 
 .text-subtitle {
     font-style: italic;
-    color: #333;
+    color: var(--text-color);
 }
 .text-date {
     font-style: italic;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 50px; 
 }
 
@@ -174,22 +174,18 @@
 
 .text-content {
     margin-top: 0.5em;
-    font-style: italic;
-    color: #666;
+    color: var(--text-color);
     font-size: 0.9em;
 }
 
 figcaption {
     margin-top: 0.5em;
     font-style: italic;
-    color: #666;
+    color: var(--text-color);
     font-size: 0.9em;
 }
 
-/* h1 {
-    padding-top: 50px;
-    padding-bottom: 20px;
-} */
+
 
 
   @media (max-width: 950px) {
