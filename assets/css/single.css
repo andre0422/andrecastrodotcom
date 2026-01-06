@@ -13,7 +13,6 @@
     top: 28px;
     left: 20px;
     z-index: 1000;
-    border: 1px solid var(--text-color);
     background-color: var(--bg-color);
     padding: 10px;
     border-radius: 15px;

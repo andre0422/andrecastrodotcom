@@ -39,7 +39,7 @@ There are several problems with this approach:
 2. The paper-based process is repetitive
 3. The paper-based form can be hard to refer back to in the future because of the several edits that take place during the original intake
 
-### 3.2 Organizational Context 
+### 3.2 Organization Context 
 
 The program relies on old-fashioned file-systems to store patient information. Administrative staff or even physicians find themselves wasting time manually copy-pasting information from the EHR into their intake 'booklets' (this is what I started calling the form, because it was quite literally a booklet rather than a form). If you've ever received a prescription or hand-written note from a physician, you must know how notoriously bad physician hand-writing can be. Compounded with medical shorthand and multiplied by the number of physicians writing on this booklet, these notes become borderline useless to anyone other than their authors. 
 
