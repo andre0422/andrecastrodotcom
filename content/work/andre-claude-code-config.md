@@ -1,5 +1,5 @@
 ---
-title: "My Claude Code Setup 2026"
+title: "Claude Code Setup for 2026"
 subtitle: "Software Engineering"
 image: "vbm_img_small.jpg"
 alt: "Claude Code Setup"
@@ -111,11 +111,10 @@ Let's make a small change and use the full workflow:
    ```
    Claude will create a conventional commit, push it, and optionally create a PR.
 
-That's it! You just completed your first AI-assisted workflow. 🎉
 
 ### Where to Get Help
 
-- This document (you're reading it!)
+- This document (you're reading it)
 - Your project guidelines file (e.g., `CLAUDE.md` or `CONTRIBUTING.md`)
 - `/help` command in Claude Code
 - Ask Claude directly: "How do I use the code-reviewer agent?"
@@ -229,7 +228,7 @@ Claude: [Invokes build-validator agent]
 All checks passed! Ready to commit.
 ```
 
-**💡 Tip**: This agent is fast (uses Haiku model). Use it liberally!
+**Tip**: This agent is fast (uses Haiku model). Use it liberally.
 
 
 ### 2. code-architect
@@ -342,7 +341,7 @@ None found.
 ✅ APPROVED WITH SUGGESTIONS
 ```
 
-**💡 Tip**: This agent knows all the patterns from `CLAUDE.md`. Use it to learn what "good code" looks like in this project.
+**Tip**: This agent knows all the patterns from `CLAUDE.md`. Use it to learn what "good code" looks like in your project.
 
 
 ### 4. code-simplifier
@@ -394,7 +393,7 @@ Agent output:
 - All tests passing: YES ✅
 ```
 
-**💡 Tip**: Use this agent **after** features work. Don't try to simplify while still implementing.
+**Tip**: Use this agent **after** features work. Don't try to simplify while still implementing.
 
 **⚠️ Warning**: This agent makes real edits. Make sure you've committed working code first!
 
@@ -461,7 +460,7 @@ Agent output:
 🟢 VERIFIED - All systems operational
 ```
 
-**💡 Tip**: This is thorough and slow. Only use before releases or major milestones.
+**Tip**: This is thorough and slow. Only use before releases or major milestones.
 
 **⚠️ Warning**: May take 5-10 minutes for full verification.
 
@@ -575,7 +574,7 @@ All checklist items pass. Safe to commit!
 Fix these before committing, or commit with --no-verify if intentional.
 ```
 
-**💡 Tip**: This is FAST (pre-computes git info). Use it before every commit!
+**Tip**: This is FAST (pre-computes git info). Use it before every commit.
 
 
 ### 3. /project:run-tests
@@ -1169,7 +1168,7 @@ I'm particularly concerned about security in the authentication logic."
 - Adding a single function with clear requirements
 - You've done this exact thing before
 
-**💡 Rule of thumb**: If you're uncertain, plan. 10 minutes planning saves hours of refactoring.
+**Rule of thumb**: If you're uncertain, plan. 10 minutes planning saves hours of refactoring.
 
 
 ### Conventional Commit Messages
@@ -1463,7 +1462,7 @@ git pull origin main
 - Settings are shared (`.claude/settings.json`)
 - Local plans are separate (`.claude/plans/` is gitignored)
 
-**💡 Tip**: Useful for:
+**Tip**: Useful for:
 - Session 1: Long-running agent (verify-app)
 - Session 2: Quick edits and commits
 
@@ -1784,7 +1783,5 @@ You now have a comprehensive understanding of how to build and customize a produ
 3. Create your project guidelines file (e.g., `CLAUDE.md`) with your patterns
 4. Customize commands and hooks for your tools
 5. Share this setup with your team
-
-**Happy Building!**
 
 
