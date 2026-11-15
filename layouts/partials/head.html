@@ -8,7 +8,7 @@
 <title>{{ $title }}</title>
 {{- $desc := site.Params.description }}
 {{- if .IsPage }}
-  {{- with .Description }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = . | plainify | htmlUnescape | strings.TrimSpace | truncate 160 }}{{ end }}{{ end }}
+  {{- with .Description }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = . | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 }}{{ end }}{{ end }}
 {{- end }}
 <meta name="description" content="{{ $desc }}">
 <link rel="canonical" href="{{ .Permalink }}">

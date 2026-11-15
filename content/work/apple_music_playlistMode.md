@@ -4,6 +4,7 @@ subtitle: "UI/UX Research, Product Management"
 image: "n/a" 
 alt: "AM - Playlist Mode Img" 
 date: 2025-12-19
+description: "A product concept for Apple Music that builds playlists passively from what you play through and skip, so you never break flow to curate."
 draft: false
 ---
 

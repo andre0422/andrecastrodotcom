@@ -31,6 +31,10 @@
   color: #666;
 }
 
+:root.dark-mode .article-meta {
+  color: #a0a0a0;
+}
+
 .article-image {
   width: 100%;
   overflow: hidden;

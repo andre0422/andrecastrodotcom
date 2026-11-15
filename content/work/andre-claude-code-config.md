@@ -4,6 +4,7 @@ subtitle: "Software Engineering"
 image: "vbm_img_small.jpg"
 alt: "Claude Code Setup"
 date: 2026-01-03
+description: "A guide to my Claude Code setup, inspired by Boris Cherny's config: specialized agents, slash commands and automated formatting."
 draft: false
 ---
 

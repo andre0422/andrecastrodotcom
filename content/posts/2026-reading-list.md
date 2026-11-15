@@ -4,6 +4,7 @@ subtitle: "Books"
 image: "n/a"
 alt: "2026 Reading List"
 date: 2025-12-28
+description: "The books I'm reading in 2026, from Harari's Nexus to Piketty, Kahneman, Toby Ord and Marx."
 draft: false
 ---
 

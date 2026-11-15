@@ -24,6 +24,8 @@ jobs:
       contents: read
     env:
       HUGO_VERSION: 0.138.0
+      # sha256 of hugo_extended_0.138.0_linux-amd64.deb from the v0.138.0 release; update together with HUGO_VERSION
+      HUGO_DEB_SHA256: 05c36b1588a6aa6642e68cbeca065246d0763a058390bb4aee9597a33031292c
       HUGO_ENVIRONMENT: production
     steps:
       - name: Install Hugo (pinned, checksum-verified)
@@ -33,6 +35,7 @@ jobs:
           deb="hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
           curl -fsSLO "${base}/${deb}"
           curl -fsSLO "${base}/hugo_${HUGO_VERSION}_checksums.txt"
+          echo "${HUGO_DEB_SHA256}  ${deb}" | sha256sum --check --strict
           grep " ${deb}\$" "hugo_${HUGO_VERSION}_checksums.txt" | sha256sum --check --strict
           sudo dpkg -i "${deb}"
           hugo version

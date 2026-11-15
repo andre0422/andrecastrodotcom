@@ -4,6 +4,7 @@ subtitle: "UI/UX Research, Product Management"
 image: "vbm_img_small.jpg" 
 alt: "VBM test" 
 date: 2024-12-11
+description: "My work as technical product manager defining design and front-end requirements for Baycrest's Virtual Behavioural Medicine program, a virtual hospital for dementia patients."
 draft: false
 ---
 
