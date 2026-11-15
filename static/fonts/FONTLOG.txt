@@ -1,0 +1,35 @@
+FONTLOG for Castro Serif
+========================
+
+Castro Serif is a Modified Version, under the SIL Open Font License 1.1
+(see OFL.txt in this folder), of four faces of "CMU Serif" from the
+Computer Modern Unicode fonts, version 0.7.0, by Andrey V. Panov
+(http://cm-unicode.sourceforge.net/).
+
+"Computer Modern Unicode fonts" is a Reserved Font Name, so the modified
+fonts carry a different name. Castro Serif is not endorsed by the authors
+of the original fonts.
+
+Files and their sources
+-----------------------
+
+castro-serif-regular.woff2     from cmunrm.ttf  (CMU Serif Roman)
+castro-serif-bold.woff2        from cmunbx.ttf  (CMU Serif Bold Extended Roman)
+castro-serif-italic.woff2      from cmunti.ttf  (CMU Serif Italic)
+castro-serif-bolditalic.woff2  from cmunbi.ttf  (CMU Serif Bold Extended Italic)
+
+Changes (2026-11-14)
+--------------------
+
+- Subset with fontTools (pyftsubset API, fontTools 4.68.0) to these
+  Unicode ranges: U+0020-007E, U+00A0-017F, U+0192, U+02C6, U+02C7,
+  U+02D8-02DD, U+2010-2027, U+2030-203A, U+2044, U+20AC, U+2122, U+2212,
+  U+2190-2193, U+2502.
+- Kept fontTools' default OpenType layout features (kern, liga, mark,
+  mkmk, locl, ...) and the TrueType hinting. Dropped the FFTM and "TeX "
+  tables.
+- Renamed in the name table: family "Castro Serif", full name
+  "Castro Serif <Style>", PostScript name "CastroSerif-<Style>", new
+  unique ID and version string. The original description (ID 0), vendor
+  URL (ID 12) and licence records (IDs 13, 14) are unchanged.
+- Converted to WOFF2. Glyph outlines are unchanged.

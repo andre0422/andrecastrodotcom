@@ -21,7 +21,7 @@
   margin-bottom: 0;
   font-size: 1.2em;
   line-height: 1.2;
-  color: #333;
+  color: var(--text-color);
 }
 
 .article-meta {
@@ -34,14 +34,6 @@
 .article-image {
   width: 100%;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-
-.article-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  padding-bottom: 20px;
   transition: transform 0.3s ease-in-out;
 }
 

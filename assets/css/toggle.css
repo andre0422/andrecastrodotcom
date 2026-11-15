@@ -25,10 +25,6 @@
     box-sizing: border-box;
   }
 
-  .slider.with-transition {
-    transition: background-color 0.6s;
-  }
-
   .slider:before {
     position: absolute;
     content: "";
@@ -41,12 +37,13 @@
     border-radius: 50%;
   }
 
-  input:checked + .slider {
-    background-color: var(--text-color);
+  :root.dark-mode .slider:before {
+    transform: translateX(25px);
   }
 
-  input:checked + .slider:before {
-    transform: translateX(25px);
+  .toggle input:focus-visible + .slider {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
   }
 
   /* Container for better alignment with the title */

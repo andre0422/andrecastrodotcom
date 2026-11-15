@@ -1,9 +1,9 @@
 <header>
-    <nav>
+    <nav aria-label="Main">
         <ul>
-            <li><a href="{{"" | relURL}}">info</a></li>
-            <li><a href="{{ "work/" | relURL }}">work</a></li>
-            <li><a href="{{ "posts/" | relURL }}">posts</a></li>
+            <li><a href="{{"" | relURL}}"{{ if .IsHome }} aria-current="page"{{ end }}>info</a></li>
+            <li><a href="{{ "work/" | relURL }}"{{ if and (eq .Kind "section") (eq .Section "work") }} aria-current="page"{{ end }}>work</a></li>
+            <li><a href="{{ "posts/" | relURL }}"{{ if and (eq .Kind "section") (eq .Section "posts") }} aria-current="page"{{ end }}>posts</a></li>
         </ul>
     </nav>
 </header>

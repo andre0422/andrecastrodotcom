@@ -1,21 +1,34 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
-    
-    {{ $mainStyle := resources.Get "css/main.css" | minify }}
-    <link rel="stylesheet" href="{{ $mainStyle.RelPermalink }}">
-    
-    {{ $toggleStyle := resources.Get "css/toggle.css" | minify }}
-    <link rel="stylesheet" href="{{ $toggleStyle.RelPermalink }}">
-
-    {{ $articleStyle := resources.Get "css/article.css" | minify }}
-    <link rel="stylesheet" href="{{ $articleStyle.RelPermalink }}">
-    
-    {{ $singleStyle := resources.Get "css/single.css" | minify }}
-    <link rel="stylesheet" href="{{ $singleStyle.RelPermalink }}">
-    
-    {{ $js := resources.Get "js/main.js" | minify }}
-    <script src="{{ $js.RelPermalink }}"></script>
-
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- if hugo.IsProduction }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+{{- end }}
+{{- $title := site.Title }}
+{{- if not .IsHome }}{{ $title = printf "%s | %s" .Title site.Title }}{{ end }}
+<title>{{ $title }}</title>
+{{- $desc := site.Params.description }}
+{{- if .IsPage }}
+  {{- with .Description }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = . | plainify | htmlUnescape | strings.TrimSpace | truncate 160 }}{{ end }}{{ end }}
+{{- end }}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- if .IsPage }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:,">
+{{- with .OutputFormats.Get "rss" }}
+{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{- end }}
+{{- $themeInit := resources.Get "js/theme-init.js" | minify | fingerprint }}
+<script src="{{ $themeInit.RelPermalink }}"></script>
+<link rel="preload" href="{{ "fonts/castro-serif-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{- $css := slice (resources.Get "css/main.css") (resources.Get "css/toggle.css") (resources.Get "css/article.css") (resources.Get "css/single.css") | resources.Concat "css/bundle.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{- $js := resources.Get "js/main.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>

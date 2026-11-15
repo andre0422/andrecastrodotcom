@@ -1,9 +1,17 @@
-.single-article .title-wrapper .toggle-container {
-    display: none;
+.hamburger-checkbox {
+    position: fixed;
+    top: 28px;
+    left: 20px;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.hamburger-checkbox {
-    display: none;
+.hamburger-checkbox:focus-visible + .hamburger-menu {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .hamburger-menu {
@@ -43,7 +51,8 @@
     width: 400px;
     background-color: var(--bg-color);
     border-right: 1px solid var(--text-color);
-    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, visibility 0s linear 0.3s;
     transform: translateX(-100%); /* Hidden by default */
     z-index: 999;
 }
@@ -63,6 +72,8 @@
 /* Show sidebar when checkbox is checked (for all screen sizes) */
 .hamburger-checkbox:checked ~ .side-nav-container {
     transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.3s ease-in-out, visibility 0s linear 0s;
 }
 
 /* Hamburger animation when checked (for all screen sizes) */
@@ -79,12 +90,6 @@
 }
 
 #TableOfContents {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-#TableOfContents nav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -311,3 +316,19 @@
     }
 }
 
+
+.article-content a {
+    border-bottom: 1px solid currentColor;
+}
+
+.article-content pre {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .article-content table {
+        display: block;
+        overflow-x: auto;
+    }
+}
