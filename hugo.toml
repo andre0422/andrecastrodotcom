@@ -14,3 +14,7 @@ disableKinds = ['taxonomy', 'term']
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = false 
+
+[privacy]
+  [privacy.youTube]
+    privacyEnhanced = true

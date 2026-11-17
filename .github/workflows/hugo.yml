@@ -45,6 +45,24 @@ jobs:
           persist-credentials: false
       - name: Build with Hugo
         run: hugo --gc --minify
+      - name: Check output size budget
+        # Fails on any file over 10 MiB, or any .mp4/.webm over 3 MiB, in the build output.
+        # Byte counts (the c suffix) keep the comparison exact; find's M suffix rounds up.
+        run: |
+          too_big=$(find public -type f -size +10485760c -exec ls -l {} +)
+          big_media=$(find public -type f \( -name '*.mp4' -o -name '*.webm' \) -size +3145728c -exec ls -l {} +)
+          status=0
+          if [ -n "${too_big}" ]; then
+            echo "::error::Files over 10 MiB in the build output:"
+            echo "${too_big}"
+            status=1
+          fi
+          if [ -n "${big_media}" ]; then
+            echo "::error::Videos (.mp4/.webm) over 3 MiB in the build output:"
+            echo "${big_media}"
+            status=1
+          fi
+          exit "${status}"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:

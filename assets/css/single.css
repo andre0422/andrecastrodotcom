@@ -225,11 +225,61 @@
     margin: 3rem 0;
 }
 
-.article-content figure img {
+.article-content figure img,
+.article-content figure video {
+    display: block;
     max-width: 100%;
     height: auto;
-    display: block;
     margin: 0 auto;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    border-radius: 8px;
+}
+
+.article-content .media-link {
+    display: block;
+    border-bottom: 0;
+}
+
+/* Walkthrough video (built-in youtube shortcode with class="video-embed") */
+.video-embed {
+    margin: 3rem 0;
+}
+
+.video-embed iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Development-only placeholders from the img, loop and todo shortcodes */
+.media-missing {
+    margin: 3rem 0;
+    padding: 2rem 1rem;
+    border: 2px dashed var(--text-color);
+    border-radius: 8px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+mark.todo {
+    background-color: #ffe58a;
+    color: #1a1a1a;
+    padding: 0 0.25em;
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}
+
+.article-content > mark.todo {
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.75rem;
 }
 
 .article-content figcaption {

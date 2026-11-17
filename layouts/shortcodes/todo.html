@@ -1,0 +1,11 @@
+{{- /*
+  Placeholder for something Andre must supply. Visible in development;
+  fails the production build so a placeholder can never be published.
+  Usage: {{< todo >}}what is needed{{< /todo >}}
+*/ -}}
+{{- $text := trim .Inner " \n" -}}
+{{- if hugo.IsProduction -}}
+  {{- errorf "%s: unresolved TODO(andre): %s" .Position $text -}}
+{{- else -}}
+<mark class="todo">TODO(andre): {{ $text }}</mark>
+{{- end -}}

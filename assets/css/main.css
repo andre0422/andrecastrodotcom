@@ -86,7 +86,7 @@ main {
   margin-top: 10px;
 }
 
-#about-text-2 a {
+#about-text-1 a, #about-text-2 a {
   border-bottom: 2px solid var(--text-color);
 }
 

@@ -1,0 +1,36 @@
+{{- /*
+  Short silent loop from the page bundle: <name>.webm, <name>.mp4 and <name>.png (poster).
+  Played while on screen by assets/js/main.js (never under reduced motion); native controls.
+  Usage: {{< loop name="loop-payment-queue" alt="..." caption="..." >}}
+  Missing files show a placeholder in development and fail the production build.
+*/ -}}
+{{- $name := .Get "name" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- if not $name }}{{ errorf "%s: loop needs name" .Position }}{{ end -}}
+{{- if not $alt }}{{ errorf "%s: loop %q needs alt text" .Position $name }}{{ end -}}
+{{- $webm := .Page.Resources.Get (print $name ".webm") -}}
+{{- $mp4 := .Page.Resources.Get (print $name ".mp4") -}}
+{{- $poster := .Page.Resources.Get (print $name ".png") -}}
+{{- $missing := slice -}}
+{{- if not $webm }}{{ $missing = $missing | append (print $name ".webm") }}{{ end -}}
+{{- if not $mp4 }}{{ $missing = $missing | append (print $name ".mp4") }}{{ end -}}
+{{- if not $poster }}{{ $missing = $missing | append (print $name ".png") }}{{ end -}}
+{{- if $missing -}}
+  {{- if hugo.IsProduction -}}
+    {{- errorf "%s: missing loop files: %s" .Position (delimit $missing ", ") -}}
+  {{- else }}
+<div class="media-missing" role="note">Missing loop files: {{ delimit $missing ", " }}</div>
+  {{- end -}}
+{{- else -}}
+  {{- $p := $poster.Resize (printf "%dx webp q75" (cond (gt $poster.Width 1280) 1280 $poster.Width)) }}
+<figure class="media">
+  <video class="media-loop" data-loop muted loop playsinline controls preload="none" poster="{{ $p.RelPermalink }}" width="{{ $p.Width }}" height="{{ $p.Height }}" aria-label="{{ $alt }}">
+    <source src="{{ $webm.RelPermalink }}" type="video/webm">
+    <source src="{{ $mp4.RelPermalink }}" type="video/mp4">
+  </video>
+  {{- with $caption }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>
+{{- end -}}

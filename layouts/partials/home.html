@@ -1,6 +1,7 @@
 <section id="about">
     {{ partial "title.html" (dict "title" .title) }}
-    <p id="about-text-1">{{ .description_1 }}</p>
+    {{- /* The description_1 link points at the AdNauseam case study; show it as plain text until that page is published. */}}
+    <p id="about-text-1">{{ if site.GetPage "/work/adnauseam" }}{{ .description_1 | safeHTML }}{{ else }}{{ .description_1 | plainify }}{{ end }}</p>
     <p id="about-text-2">
         {{ .description_2 | safeHTML }}
     </p>
