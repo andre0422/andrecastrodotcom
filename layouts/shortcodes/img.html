@@ -1,6 +1,6 @@
 {{- /*
   Page-bundle screenshot as WebP (max 1600 px wide, plus an 800 px variant),
-  lazy-loaded, with width/height, linked to the full-size WebP.
+  lazy-loaded, with width/height. Not linked: the image can't be opened on its own.
   Usage: {{< img src="payment-queue.png" alt="..." caption="..." >}}
   A missing file shows a placeholder in development and fails the production build.
 */ -}}
@@ -18,9 +18,7 @@
     {{- $srcset = printf "%s %dw, %s" $half.RelPermalink $half.Width $srcset -}}
   {{- end }}
 <figure class="media">
-  <a class="media-link" href="{{ $full.RelPermalink }}">
-    <img src="{{ $full.RelPermalink }}" srcset="{{ $srcset }}" sizes="(max-width: 860px) 90vw, 760px" width="{{ $full.Width }}" height="{{ $full.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
-  </a>
+  <img src="{{ $full.RelPermalink }}" srcset="{{ $srcset }}" sizes="(max-width: 860px) 90vw, 760px" width="{{ $full.Width }}" height="{{ $full.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
   {{- with $caption }}
   <figcaption>{{ . }}</figcaption>
   {{- end }}

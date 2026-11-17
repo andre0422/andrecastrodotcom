@@ -235,11 +235,6 @@
     border-radius: 8px;
 }
 
-.article-content .media-link {
-    display: block;
-    border-bottom: 0;
-}
-
 /* Walkthrough video (built-in youtube shortcode with class="video-embed") */
 .video-embed {
     margin: 3rem 0;
