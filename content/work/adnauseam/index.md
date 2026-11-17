@@ -5,7 +5,7 @@ date: 2026-11-15
 description: "AdNauseam, a claims platform I built for travel and medical insurance: one clean, fast workspace for examiners, with payment controls and an audit trail."
 og_image: "policy-claim-grid.png"
 og_image_alt: "A policy page in AdNauseam: the policyholder's coverage and a grid of their claims with status and amount billed."
-draft: true
+draft: false
 build:
   publishResources: false
 ---
